@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffef9;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #fffef9;
+    padding: 10px 20px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HAMBURGER */
+.hamburger {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: none; 
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+#menu-toggle {
+    display: none;
+}
+
+.hero {
+    background-image: url(/slike/Paracordia\ 1.png);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img {
+        max-width: 40%; /* Slike će biti smanjene na maksimalno 80% širine roditeljskog kontejnera */
+        height: auto; /* Visina će se automatski prilagoditi proporcionalno širini */
+        margin: 0 auto; /* Centriranje slika */
+        display: block; /* Omogućava centriranje */
+}
+
+
+
+
+/* Mala ekrani - Aktiviramo hamburger */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #fffef9;
+        position: relative;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .menu li a{
+        color: black;
+    }
+
+    #menu-toggle:checked + .hamburger + .menu {
+        display: flex;
+    }
+}
